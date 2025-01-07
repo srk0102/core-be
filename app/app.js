@@ -8,12 +8,15 @@ import bodyParser from 'body-parser'
 
 import { FE_URL, APP_NAME, NODE_ENV } from '../config'
 
+import { connectDB } from './database'
 import { Routes } from '../routes'
 import { sendResponse, Logger, logRequest, ASCII_ART } from '../utils'
 
-export const InitializeApp = () => {
+export const InitializeApp = async () => {
 
 	const app = express()
+
+	await connectDB()
 
 	// set security HTTP headers
 	app.use(helmet())

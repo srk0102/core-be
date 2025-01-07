@@ -7,6 +7,10 @@ export const APP_NAME = process.env.APP_NAME
 export const NODE_ENV = process.env.NODE_ENV
 export const PORT = process.env.PORT ? process.env.PORT : 8000
 
+//DATABASE
+export const DB_URI = process.env.DB_URI
+export const DATABASE_NAME = process.env.DATABASE_NAME
+
 //CRYPTO KEYS
 export const CRYPTO_KEY = process.env.CRYPTO_KEY
 export const CRYPTO_IV = process.env.CRYPTO_IV

@@ -5,7 +5,7 @@ import { PORT, NODE_ENV } from './config'
 //Initialize server
 (async () => {
 	try {
-		const app = InitializeApp()
+		const app = await InitializeApp()
 		app.listen(PORT, () => {
 			Logger.success(`Server Running on ${PORT}, environment: ${NODE_ENV}`)
 		})
