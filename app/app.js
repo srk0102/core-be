@@ -16,7 +16,7 @@ export const InitializeApp = async () => {
 
 	const app = express()
 
-	await connectDB()
+	// await connectDB()
 
 	// set security HTTP headers
 	app.use(helmet())
@@ -27,7 +27,7 @@ export const InitializeApp = async () => {
 	app.use(json())
 
 	app.use(cors({
-		origin: FE_URL,
+		origin: '*',
 		methods: 'GET,POST,PUT,DELETE',
 		credentials: true,
 	}))
